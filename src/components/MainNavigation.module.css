@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: 0 32px;
+  max-width: 1200px;
+  margin: 32px auto 32px auto;
+}
+
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.navItem {
+  display: flex;
+  list-style: none;
+  font-size: 22px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+}
+
+.navItem li {
+  margin: 30px;
+  padding: 8px 16px;
+}
+
+.navItem li:last-child {
+  margin-right: 0px;
+}
