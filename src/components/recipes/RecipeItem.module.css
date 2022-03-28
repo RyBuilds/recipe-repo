@@ -1,0 +1,47 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 16px 24px;
+}
+
+.content h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  margin-bottom: 6px;
+}
+
+.content h4 {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.actions {
+  padding: 16px 16px 16px 16px;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  border: 3px solid #1d1d1b;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}

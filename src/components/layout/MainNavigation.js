@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
+import SearchBar from "../SearchBar";
 
 function MainNavigation() {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>Recipe.ly</div>
       <nav>
-        <ul className={classes.navItem}>
+        <ul>
           <li>
             <Link to="/">All Recipes</Link>
           </li>
@@ -18,6 +19,7 @@ function MainNavigation() {
           </li>
         </ul>
       </nav>
+      <SearchBar />
     </header>
   );
 }

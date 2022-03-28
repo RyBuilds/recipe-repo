@@ -3,12 +3,11 @@ import { Route, Switch } from "react-router-dom";
 import AllRecipesPage from "./pages/AllRecipes";
 import QuickRecipesPage from "./pages/QuickRecipes";
 import NewRecipePage from "./pages/NewRecipe";
-import MainNavigation from "./components/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNavigation />
+    <Layout>
       <Switch>
         <Route exact path="/">
           <AllRecipesPage />
@@ -20,7 +19,7 @@ function App() {
           <NewRecipePage />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 

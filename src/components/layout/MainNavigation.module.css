@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 96px;
-  padding: 0 32px;
+  /* padding: 0 32px; */
   max-width: 1200px;
   margin: 32px auto 32px auto;
 }
@@ -13,7 +13,7 @@
   font-weight: bold;
 }
 
-.navItem {
+.header ul {
   display: flex;
   list-style: none;
   font-size: 22px;
@@ -22,11 +22,16 @@
   justify-content: center;
 }
 
-.navItem li {
-  margin: 30px;
+.header li {
+  margin: 16px;
   padding: 8px 16px;
 }
 
-.navItem li:last-child {
+.header li:last-child {
   margin-right: 0px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #1d1d1d;
 }
