@@ -4,4 +4,7 @@
   /* border-radius: 32px; */
   box-shadow: 2px 4px 120px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  height: 488px;
+  display: flex;
+  flex-direction: column;
 }

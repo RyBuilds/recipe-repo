@@ -1,6 +1,5 @@
 .item {
-  display: flex;
-  flex-direction: column;
+  height: 488px;
 }
 
 .image img {
@@ -28,15 +27,22 @@
 
 .actions {
   padding: 16px 16px 16px 16px;
+  position: relative;
+  height: 56px;
+  margin-top: auto;
 }
 
 .actions button {
+  display: flex;
   font: inherit;
   cursor: pointer;
   border: 3px solid #1d1d1b;
   padding: 8px 16px;
   border-radius: 10px;
   background-color: #ffffff;
+  margin-top: auto;
+  position: absolute;
+  top: 0;
 }
 
 .align {
