@@ -12,7 +12,6 @@ function RecipeList(props) {
           heading={recipe.heading}
           subheading={recipe.subheading}
           duration={recipe.duration}
-          cuisine={recipe.cuisine}
         />
       ))}
     </ul>

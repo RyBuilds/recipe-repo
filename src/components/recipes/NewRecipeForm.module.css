@@ -20,6 +20,36 @@
   width: 100%;
 }
 
+h5 {
+  margin-top: 36px;
+  font-size: 28px;
+}
+
+.formSecondary {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.controlHelper {
+  margin-bottom: 18px;
+}
+
+.controlHelper label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.controlHelper input {
+  display: block;
+  font: inherit;
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: 100%;
+}
+
 .actions {
   margin-top: 40px;
 }

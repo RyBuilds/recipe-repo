@@ -50,7 +50,6 @@ export default AllRecipesPage;
 //   subheading: ``,
 //   image: ``,
 //   duration: ``,
-//   cuisine: ``,
 //   ingredients: [
 //     {
 //       ingredient: ``,

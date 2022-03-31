@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import Card from "../ui/Card";
+import FormCard from "../ui/FormCard";
 import classes from "./NewRecipeForm.module.css";
 
 function NewRecipeForm(props) {
@@ -28,7 +28,7 @@ function NewRecipeForm(props) {
   }
 
   return (
-    <Card>
+    <FormCard>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="heading">Recipe Heading</label>
@@ -51,11 +51,47 @@ function NewRecipeForm(props) {
           <label htmlFor="duration">Recipe Duration</label>
           <input type="number" required id="duration" ref={durationInputRef} />
         </div>
+        {/* 
+        <h3>Ingredients</h3>
+
+        <div className={classes.formSecondary}>
+          <div className={classes.controlHelper}>
+            <label htmlFor="name">Ingredient</label>
+            <input type="text" required id="name" name="ingredient.name" />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="quantity">Quantity</label>
+            <input
+              type="number"
+              required
+              id="quantity"
+              name="ingredient.quantity"
+            />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="units">Unit(s)</label>
+            <input type="text" id="units" name="ingredient.units" />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="allergens">Allergens</label>
+            <input type="text" id="allergens" name="ingredient.allergens" />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="ingredientImage">Image</label>
+            <input
+              type="url"
+              required
+              id="ingredientImage"
+              name="ingredient.image"
+            />
+          </div>
+        </div> */}
+
         <div className={classes.actions}>
           <button type="submit">Add Recipe</button>
         </div>
       </form>
-    </Card>
+    </FormCard>
   );
 }
 
