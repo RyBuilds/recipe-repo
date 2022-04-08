@@ -1,26 +1,64 @@
-Map
+<Index>
+<BrowserRouter>
+    <App>
+    <Layout>
+      <MainNavigation>
+        <Link>All Recipes</Link>
+        <Link>Quick Recipes</Link>
+        <Link>Add New Recipe</Link>
+        <SearchBar></SearchBar>
+      </MainNavigation>
+      <Switch>
+        <Route>
+          <AllRecipesPage>
+            <RecipeItem>
+                <Card>
+                    <Props>
+                </Card>
+            </RecipeItem>
+          </AllRecipesPage>
+        </Route>
+        <Route>
+          <FullRecipe>
+          </FullRecipe>
+        </Route>
+        <Route>
+          <QuickRecipesPage>
+          </QuickRecipesPage>
+        </Route>
+        <Route>
+          <NewRecipePage>
+            <NewRecipeForm>
+                <FormCard>
+                    <IngredientForm>
+                    <IngredientForm>
+                </FormCard>
+            </NewRecipeForm>
+          </NewRecipePage>
+        </Route>
+      </Switch>
+    </Layout>
+    </App>
+</BrowserRouter>
 
--- Layout
--- MainNavigation
----- Logo
----- All Recipes
----- Quick Recipes
----- New Recipe
----- Search Bar
+#TO DO
 
-App
+global context which gets slug
+design and render the full recipe
 
-<> All Recipes
----- Card
----- RecipeItem
----- Card
+add ingredients text area
+structure inputs into an array
+loop through ingredients(array)
+generate n ingredient forms
+autofill ingredient name
+change onSubmission action
 
-<> Quick Recipes
----- RecipeList
+step one to step six form
 
-<> New Recipe
----- FormCard
----- NewRecipeForm
----- FormCard
+figure out why image has a gap
+adjust gap between card and nav
+add padding to 1200px container
+clean up recipe card component
 
-global context which gets the slug and
+quick recipe functionality
+search bar functionality

@@ -1,10 +1,8 @@
-import "./SearchBar.module.css";
-// import { FiSearch } from "react-icons/fi";
+import "../css/SearchBar.module.css";
 
 function SearchBar() {
   return (
     <div>
-      {/* <FiSearch /> */}
       <input type="text" placeholder="Search..." />
     </div>
   );

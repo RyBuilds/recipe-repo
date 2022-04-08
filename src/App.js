@@ -10,6 +10,7 @@ import FullRecipe from "./components/recipes/FullRecipe";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedRecipes, setLoadedRecipes] = useState([]);
+  const [loadedIngredients, setLoadedIngredients] = useState([]);
 
   useEffect(() => {
     fetch("https://recipe-ly-default-rtdb.firebaseio.com/recipes.json")
@@ -30,6 +31,24 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    fetch("https://recipe-ly-default-rtdb.firebaseio.com/ingredients.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const ingredients = [];
+        for (const key in data) {
+          const ingredient = {
+            ...data[key],
+          };
+          ingredients.push(ingredient);
+        }
+        setIsLoading(false);
+        setLoadedIngredients(ingredients);
+      });
+  }, []);
+
   if (isLoading) {
     return (
       <section>
@@ -45,7 +64,7 @@ function App() {
           <AllRecipesPage recipes={loadedRecipes} />
         </Route>
         <Route path="/recipe/:recipeName">
-          <FullRecipe recipes={loadedRecipes} />
+          <FullRecipe recipes={loadedRecipes} ingredients={loadedIngredients} />
         </Route>
         <Route path="/quick-recipes">
           <QuickRecipesPage />

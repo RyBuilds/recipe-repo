@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom";
+import NewIngredientForm from "../components/recipes/NewIngredientForm";
 
 import NewRecipeForm from "../components/recipes/NewRecipeForm";
 
@@ -17,10 +18,27 @@ function NewRecipePage() {
     });
   }
 
+  function newIngredientHandler(ingredientData) {
+    fetch(`https://recipe-ly-default-rtdb.firebaseio.com/ingredients.json`, {
+      method: "POST",
+      body: JSON.stringify(ingredientData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(() => {
+        history.replace("/");
+      })
+      .then(() => {
+        history.replace("/new-recipe");
+      });
+  }
+
   return (
     <section className="form">
       {/* <h1>Add New Meetup</h1> */}
       <NewRecipeForm onNewRecipe={newRecipeHandler} />
+      <NewIngredientForm onNewIngredient={newIngredientHandler} />
     </section>
   );
 }
