@@ -1,44 +1,29 @@
-import { useState, useEffect } from "react";
-import RecipeList from "../components/recipes/RecipeList";
+import RecipeItem from "../components/recipes/RecipeItem";
 
-function AllRecipesPage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadedRecipes, setLoadedRecipes] = useState([]);
-
-  useEffect(() => {
-    fetch("https://recipe-ly-default-rtdb.firebaseio.com/recipes.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const recipes = [];
-        for (const key in data) {
-          const recipe = {
-            id: key,
-            ...data[key],
-          };
-
-          recipes.push(recipe);
-        }
-
-        setIsLoading(false);
-        setLoadedRecipes(recipes);
-      });
-  }, []);
-
-  if (isLoading) {
-    return (
-      <section>
-        <p>Loading...</p>
-      </section>
-    );
+function AllRecipesPage(props) {
+  function slugHandler(heading) {
+    const slug = heading
+      .toLowerCase()
+      .replaceAll(" ", "-")
+      .replaceAll(",", "")
+      .replaceAll("&", "and");
+    return slug;
   }
 
   return (
-    <section>
-      {/* <h1>All Recipes Page</h1> */}
-      <RecipeList recipes={loadedRecipes} />
-    </section>
+    <ul className="grid">
+      {props.recipes.map((recipe) => (
+        <RecipeItem
+          key={recipe.id}
+          id={recipe.id}
+          slug={slugHandler(recipe.heading)}
+          image={recipe.image}
+          heading={recipe.heading}
+          subheading={recipe.subheading}
+          duration={recipe.duration}
+        />
+      ))}
+    </ul>
   );
 }
 

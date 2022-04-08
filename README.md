@@ -1,6 +1,5 @@
 Map
 
-App
 -- Layout
 -- MainNavigation
 ---- Logo
@@ -9,16 +8,19 @@ App
 ---- New Recipe
 ---- Search Bar
 
---<> All Recipes: props>
------- RecipeList: >props>
--------- Card
--------- RecipeItem: >props
--------- Card
+App
 
---<> Quick Recipes
------- RecipeList
+<> All Recipes
+---- Card
+---- RecipeItem
+---- Card
 
---<> New Recipe
------- Card
------- NewRecipeForm
------- Card
+<> Quick Recipes
+---- RecipeList
+
+<> New Recipe
+---- FormCard
+---- NewRecipeForm
+---- FormCard
+
+global context which gets the slug and

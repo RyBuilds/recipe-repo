@@ -6,16 +6,17 @@ import { FiClock } from "react-icons/fi";
 import FullRecipe from "./FullRecipe";
 
 function RecipeItem(props) {
+  console.log(props);
+
   const history = useHistory();
-  const recipeSlug = props.heading
-    .toLowerCase()
-    .replaceAll(" ", "-")
-    .replaceAll(",", "")
-    .replaceAll("&", "and");
+  // const recipeSlug = props.heading
+  //   .toLowerCase()
+  //   .replaceAll(" ", "-")
+  //   .replaceAll(",", "")
+  //   .replaceAll("&", "and");
 
   function viewRecipeHandler() {
-    history.push(`/recipe/${recipeSlug}`);
-    console.log(props);
+    history.push(`/recipe/${props.slug}`);
     const heading = props.heading;
     return (
       <FullRecipe
