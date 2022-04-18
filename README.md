@@ -41,6 +41,9 @@
     </App>
 </BrowserRouter>
 
+<RecipeContext.Provider>
+<RecipeContext.Consumer>
+
 #TO DO
 
 global context which gets slug
