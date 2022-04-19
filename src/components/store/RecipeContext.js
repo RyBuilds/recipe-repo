@@ -3,9 +3,9 @@ import { useState, useEffect, createContext } from "react";
 const RecipesContext = createContext();
 
 export function RecipesContextProvider(props) {
-  let [isLoading, setIsLoading] = useState(true);
-  let [loadedRecipes, setLoadedRecipes] = useState([]);
-  let [loadedIngredients, setLoadedIngredients] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedRecipes, setLoadedRecipes] = useState([]);
+  const [loadedIngredients, setLoadedIngredients] = useState([]);
 
   useEffect(() => {
     fetch("https://recipe-ly-default-rtdb.firebaseio.com/recipes.json")
@@ -15,7 +15,7 @@ export function RecipesContextProvider(props) {
       .then((data) => {
         const recipes = [];
         for (const key in data) {
-          let recipe = {
+          const recipe = {
             id: key,
             ...data[key],
           };
@@ -67,7 +67,9 @@ export function RecipesContextProvider(props) {
     );
   }
 
-  !isLoading ? console.log(context) : console.log("");
+  !isLoading
+    ? console.log(context)
+    : console.log(`Unloaded Context: ${context}`);
 
   return (
     <RecipesContext.Provider value={context}>

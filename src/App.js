@@ -11,8 +11,8 @@ import RecipesContext from "./components/store/RecipeContext";
 
 function App() {
   const recipesCntx = useContext(RecipesContext);
-  let recipes = recipesCntx.recipes;
-  console.log(recipes);
+  const loading = recipesCntx.loading;
+  console.log(loading);
 
   return (
     <RecipesContextProvider>
