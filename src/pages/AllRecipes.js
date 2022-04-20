@@ -1,22 +1,17 @@
 import RecipeItem from "../components/recipes/RecipeItem";
+import { useRecipes } from "../components/store/RecipeContext";
 
 function AllRecipesPage(props) {
-  function slugHandler(heading) {
-    const slug = heading
-      .toLowerCase()
-      .replaceAll(" ", "-")
-      .replaceAll(",", "")
-      .replaceAll("&", "and");
-    return slug;
-  }
+  const recipes = useRecipes().recipes;
+  // console.log(recipes);
 
   return (
     <ul className="grid">
-      {props.recipes.map((recipe) => (
+      {recipes.map((recipe) => (
         <RecipeItem
           key={recipe.id}
           id={recipe.id}
-          slug={slugHandler(recipe.heading)}
+          slug={recipe.slug}
           image={recipe.image}
           heading={recipe.heading}
           subheading={recipe.subheading}
@@ -198,3 +193,4 @@ export default AllRecipesPage;
 //     ],
 //   },
 // ];
+git;

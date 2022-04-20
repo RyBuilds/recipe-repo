@@ -7,33 +7,20 @@ import QuickRecipesPage from "./pages/QuickRecipes";
 import NewRecipePage from "./pages/NewRecipe";
 import Layout from "./components/layout/Layout";
 import { RecipesContextProvider } from "./components/store/RecipeContext";
-import RecipesContext from "./components/store/RecipeContext";
 
 function App() {
-  const recipesCntx = useContext(RecipesContext);
-  const loading = recipesCntx.loading;
-  console.log(loading);
-
   return (
     <RecipesContextProvider>
       <Layout>
         <Switch>
           <Route exact path="/">
-            <AllRecipesPage
-            // recipes={loadedRecipes}
-            />
+            <AllRecipesPage />
           </Route>
           <Route path="/recipe/:recipeName">
-            <FullRecipe
-            // recipes={loadedRecipes}
-            // ingredients={loadedIngredients}
-            />
+            <FullRecipe />
           </Route>
           <Route path="/quick-recipes">
-            <QuickRecipesPage
-            // recipes={loadedRecipes}
-            // ingredients={loadedIngredients}
-            />
+            <QuickRecipesPage />
           </Route>
           <Route path="/new-recipe">
             <NewRecipePage />

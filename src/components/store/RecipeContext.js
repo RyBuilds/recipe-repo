@@ -1,9 +1,9 @@
-import { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
+import { createPortal } from "react-dom";
 
 const RecipesContext = createContext();
 
 export function RecipesContextProvider(props) {
-  const [isLoading, setIsLoading] = useState(true);
   const [loadedRecipes, setLoadedRecipes] = useState([]);
   const [loadedIngredients, setLoadedIngredients] = useState([]);
 
@@ -47,29 +47,12 @@ export function RecipesContextProvider(props) {
       });
   }, []);
 
-  useEffect(() => {
-    if (loadedRecipes.length && loadedIngredients.length) {
-      setIsLoading(false);
-    }
-  });
-
   const context = {
-    loading: isLoading,
     recipes: loadedRecipes,
     ingredients: loadedIngredients,
   };
 
-  if (isLoading) {
-    return (
-      <section>
-        <p>Loading...</p>
-      </section>
-    );
-  }
-
-  !isLoading
-    ? console.log(context)
-    : console.log(`Unloaded Context: ${context}`);
+  console.log(context);
 
   return (
     <RecipesContext.Provider value={context}>
@@ -78,4 +61,12 @@ export function RecipesContextProvider(props) {
   );
 }
 
-export default RecipesContext;
+export const useRecipes = () => {
+  const value = React.useContext(RecipesContext);
+
+  if (!value) {
+    throw new Error("RecipeContext Must be consumer within the UserProvider");
+  }
+
+  return value;
+};
