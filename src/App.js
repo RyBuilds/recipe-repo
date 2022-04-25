@@ -1,11 +1,10 @@
 import { Route, Switch } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
 
+import Layout from "./components/layout/Layout";
 import AllRecipesPage from "./pages/AllRecipes";
 import FullRecipe from "./components/recipes/FullRecipe";
 import QuickRecipesPage from "./pages/QuickRecipes";
 import NewRecipePage from "./pages/NewRecipe";
-import Layout from "./components/layout/Layout";
 import { RecipesContextProvider } from "./components/store/RecipeContext";
 
 function App() {

@@ -1,9 +1,8 @@
 import RecipeItem from "../components/recipes/RecipeItem";
 import { useRecipes } from "../components/store/RecipeContext";
 
-function AllRecipesPage(props) {
+function AllRecipesPage() {
   const recipes = useRecipes().recipes;
-  // console.log(recipes);
 
   return (
     <ul className="grid">
