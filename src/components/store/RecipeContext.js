@@ -39,7 +39,7 @@ export function RecipesContextProvider(props) {
     };
     getRecipes();
     getIngredients();
-  }, []);
+  }, [recipesCollection, ingredientsCollection]);
 
   const context = {
     recipes: loadedRecipes,
