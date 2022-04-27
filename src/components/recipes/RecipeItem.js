@@ -9,7 +9,6 @@ function RecipeItem(props) {
 
   function viewRecipeHandler() {
     history.push(`/recipe/${props.slug}`);
-    const heading = props.heading;
   }
 
   return (
