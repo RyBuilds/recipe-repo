@@ -9,10 +9,11 @@ export function RecipesContextProvider(props) {
   const [loadedIngredients, setLoadedIngredients] = useState([]);
 
   // ACCESS FIRESTORE COLLECTIONS
-  const recipesCollection = collection(db, "recipes");
-  const ingredientsCollection = collection(db, "ingredients");
 
   useEffect(() => {
+    const recipesCollection = collection(db, "recipes");
+    const ingredientsCollection = collection(db, "ingredients");
+
     const getRecipes = async () => {
       const recipes = await getDocs(recipesCollection);
       setLoadedRecipes(
@@ -39,7 +40,7 @@ export function RecipesContextProvider(props) {
     };
     getRecipes();
     getIngredients();
-  }, [recipesCollection, ingredientsCollection]);
+  }, []);
 
   const context = {
     recipes: loadedRecipes,
