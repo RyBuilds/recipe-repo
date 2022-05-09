@@ -1,0 +1,17 @@
+.container {
+  margin-bottom: 48px;
+  width: 298px;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 6px;
+
+  /* border-bottom: 1px #1d1d1d solid; */
+}
+.title {
+  font-weight: bold;
+}

@@ -31,18 +31,25 @@ function FullRecipe() {
       </div>
       <h1 className={classes.h1}>{heading}</h1>
       <h2 className={classes.h2}>{subheading}</h2>
+      <p className={classes.duration}>
+        <span className={classes.time}>{duration}</span> minutes
+      </p>
 
-      {/* <p>{duration}</p> */}
-
-      {/* <h1>Ingredients</h1> */}
-
+      <h3 className={classes.h3}>Ingredients</h3>
       <Ingredients ingredients={ingredients} />
 
-      {/* ONLY STYLING LEFT */}
-      {/* <Nutrition nutrition={nutrition} /> */}
+      <h3 className={classes.h3}>Utensils</h3>
 
-      {/* <Utensils utensils={utensils} /> */}
+      <ul className={classes.utensilsContainer}>
+        {utensils.map((item) => {
+          return <Utensils key={item} utensils={item} />;
+        })}
+      </ul>
 
+      <h3 className={classes.h3}>Nutritional Information</h3>
+      <Nutrition nutrition={nutrition} />
+
+      <h3 className={classes.h3}>Cooking Instructions</h3>
       <div className={classes.grid}>
         {instructions?.map((step, index) => {
           return (

@@ -1,0 +1,10 @@
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.item {
+  margin-right: 24px;
+  margin-bottom: 48px;
+  font-size: 20px;
+}

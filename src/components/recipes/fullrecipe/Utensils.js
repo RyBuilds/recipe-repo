@@ -1,8 +1,11 @@
+import classes from "../../css/Utensils.module.css";
+
 function Utensils(props) {
+  console.log(props);
   return (
-    <div>
-      <h2>{props.utensils}</h2>
-    </div>
+    <li className={classes.item}>
+      <p>{props.utensils}</p>
+    </li>
   );
 }
 

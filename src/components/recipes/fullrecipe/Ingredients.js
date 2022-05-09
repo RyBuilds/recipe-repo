@@ -9,7 +9,7 @@ function Ingredients(props) {
   //   console.log(`${key}: ${value}`);
   // }
 
-  return <h1></h1>;
+  return <div></div>;
 }
 
 export default Ingredients;
