@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
-import { db } from "../store/Base";
+import { db } from "./Base";
 import { collection, getDocs } from "firebase/firestore";
 
 const RecipesContext = createContext();
@@ -7,8 +7,6 @@ const RecipesContext = createContext();
 export function RecipesContextProvider(props) {
   const [loadedRecipes, setLoadedRecipes] = useState([]);
   const [loadedIngredients, setLoadedIngredients] = useState([]);
-
-  // ACCESS FIRESTORE COLLECTIONS
 
   useEffect(() => {
     const recipesCollection = collection(db, "recipes");
@@ -38,6 +36,7 @@ export function RecipesContextProvider(props) {
         }))
       );
     };
+
     getRecipes();
     getIngredients();
   }, []);

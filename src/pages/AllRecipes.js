@@ -1,5 +1,5 @@
 import RecipeItem from "../components/recipes/RecipeItem";
-import { useRecipes } from "../components/store/RecipeContext";
+import { useRecipes } from "../components/data/RecipeContext";
 
 function AllRecipesPage() {
   const recipes = useRecipes().recipes;

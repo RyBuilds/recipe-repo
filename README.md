@@ -65,8 +65,6 @@ generate n ingredient forms
 autofill ingredient name
 change onSubmission action
 
-step one to step six form
-
 figure out why image has a gap
 adjust gap between card and nav
 add padding to 1200px container
@@ -76,7 +74,6 @@ quick recipe functionality
 search bar functionality
 
 #SPITBALLING
-ingredients as an array separated by commas
 for each element, check if it exists in ingredients
 if not? push to new array
 for each element, new page which renders a JSX ingredients form

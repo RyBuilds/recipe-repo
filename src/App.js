@@ -5,7 +5,7 @@ import AllRecipesPage from "./pages/AllRecipes";
 import FullRecipe from "./components/recipes/FullRecipe";
 import QuickRecipesPage from "./pages/QuickRecipes";
 import NewRecipePage from "./pages/NewRecipe";
-import { RecipesContextProvider } from "./components/store/RecipeContext";
+import { RecipesContextProvider } from "./components/data/RecipeContext";
 
 function App() {
   return (

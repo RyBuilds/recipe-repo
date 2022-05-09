@@ -1,0 +1,38 @@
+.h1 {
+  font-size: 64px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.h2 {
+  font-size: 36px;
+  margin-bottom: 48px;
+}
+
+.imageContainer {
+  height: 350px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  border-radius: 24px 24px 5px 5px;
+}
+
+.image {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  /* filter: blur(5px); */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  grid-template-rows: repeat(1, 552px);
+  column-gap: 24px;
+  row-gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
