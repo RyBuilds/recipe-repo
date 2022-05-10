@@ -1,13 +1,12 @@
 .h1 {
-  font-size: 62px;
+  font-size: 56px;
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .h2 {
-  font-size: 36px;
-  /* margin-bottom: 48px; */
-  margin-bottom: 32px;
+  font-size: 32px;
+  margin-bottom: 30px;
   font-weight: normal;
 }
 
@@ -16,14 +15,18 @@
   margin-bottom: 12px;
 }
 
-.duration {
-  margin-bottom: 48px;
-  font-size: 20px;
-  font-weight: bold;
+.alth3 {
+  font-size: 30px;
+  margin-bottom: 32px;
+  /* display: flex;
+  justify-content: center; */
+  margin-left: 32px;
 }
 
-.time {
-  font-size: 30px;
+.headerSection {
+  background-color: #fff;
+  border-radius: 32px;
+  margin-bottom: 36px;
 }
 
 .imageContainer {
@@ -31,7 +34,7 @@
   overflow: hidden;
   object-fit: cover;
   position: relative;
-  border-radius: 24px 24px 5px 5px;
+  border-radius: 24px 24px 0px 0px;
 }
 
 .image {
@@ -42,12 +45,49 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
+.headerText {
+  padding: 18px 32px 32px 32px;
+}
+
+.durationLabel {
+  font-size: 20px;
+  font-weight: normal;
+  /* margin-bottom: 48px; */
+}
+
+.duration {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 
+*/
+
+.informationSection {
+  background-color: #fff;
+  border-radius: 32px;
+  margin-bottom: 64px;
+  padding: 32px;
+}
+
+.informationGrid {
+  display: grid;
+  grid-template-columns: auto 299px;
+}
+
 .utensilsContainer {
   display: flex;
   flex-direction: row;
 }
 
-.grid {
+/* 
+*/
+
+.instructionsSection {
+  margin-bottom: 100px;
+}
+
+.card {
   display: grid;
   grid-template-columns: repeat(3, 384px);
   grid-template-rows: repeat(1, 552px);

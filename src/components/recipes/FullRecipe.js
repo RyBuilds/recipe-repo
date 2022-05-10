@@ -26,42 +26,55 @@ function FullRecipe() {
 
   return (
     <div>
-      <div className={classes.imageContainer}>
-        <img className={classes.image} src={image} alt={heading} />
+      <div className={classes.headerSection}>
+        <div className={classes.imageContainer}>
+          <img className={classes.image} src={image} alt={heading} />
+        </div>
+        <div className={classes.headerText}>
+          <h1 className={classes.h1}>{heading}</h1>
+          <h2 className={classes.h2}>{subheading}</h2>
+          <p className={classes.durationLabel}>
+            <span className={classes.duration}>{duration}</span> minutes
+          </p>
+        </div>
       </div>
-      <h1 className={classes.h1}>{heading}</h1>
-      <h2 className={classes.h2}>{subheading}</h2>
-      <p className={classes.duration}>
-        <span className={classes.time}>{duration}</span> minutes
-      </p>
 
-      <h3 className={classes.h3}>Ingredients</h3>
-      <Ingredients ingredients={ingredients} />
+      <div className={classes.informationSection}>
+        <div className={classes.informationGrid}>
+          <div>
+            <h3 className={classes.h3}>Ingredients</h3>
+            <Ingredients ingredients={ingredients} />
 
-      <h3 className={classes.h3}>Utensils</h3>
+            <h3 className={classes.h3}>Utensils</h3>
+            <ul className={classes.utensilsContainer}>
+              {utensils.map((item) => {
+                return <Utensils key={item} utensils={item} />;
+              })}
+            </ul>
+          </div>
+          <div className={classes.rightGrid}>
+            <h3 className={classes.h3}>Nutritional Information</h3>
+            <Nutrition nutrition={nutrition} />
+          </div>
+        </div>
+      </div>
 
-      <ul className={classes.utensilsContainer}>
-        {utensils.map((item) => {
-          return <Utensils key={item} utensils={item} />;
-        })}
-      </ul>
-
-      <h3 className={classes.h3}>Nutritional Information</h3>
-      <Nutrition nutrition={nutrition} />
-
-      <h3 className={classes.h3}>Cooking Instructions</h3>
-      <div className={classes.grid}>
-        {instructions?.map((step, index) => {
-          return (
-            <Instructions
-              key={index + 1}
-              index={index + 1}
-              heading={heading}
-              instruction={step.instruction}
-              image={step.image}
-            />
-          );
-        })}
+      <div className={classes.instructionsSection}>
+        <div className={classes.instructions}></div>
+        <h3 className={classes.alth3}>Instructions</h3>
+        <div className={classes.card}>
+          {instructions?.map((step, index) => {
+            return (
+              <Instructions
+                key={index + 1}
+                index={index + 1}
+                heading={heading}
+                instruction={step.instruction}
+                image={step.image}
+              />
+            );
+          })}
+        </div>
       </div>
 
       {/* <Instructions instructions={steps} /> */}
