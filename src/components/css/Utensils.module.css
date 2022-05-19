@@ -4,7 +4,6 @@ li {
 }
 
 .item {
-  margin-right: 24px;
-  margin-bottom: 48px;
+  margin: 0px 16px;
   font-size: 20px;
 }

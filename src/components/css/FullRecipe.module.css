@@ -1,32 +1,50 @@
-.h1 {
+/* 
+*/
+/* GENERAL */
+/* 
+*/
+
+.subheading {
+  font-size: 38px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* 
+*/
+/* HEADER */
+/* 
+*/
+
+.headerSection {
+  background-color: #fff;
+  border-radius: 32px 32px 0px 0px;
+}
+
+.textContainer {
+  padding: 32px 32px 48px 32px;
+}
+
+.heading {
   font-size: 56px;
   margin-top: 12px;
   margin-bottom: 8px;
 }
 
-.h2 {
+.secondaryheading {
   font-size: 32px;
   margin-bottom: 30px;
   font-weight: normal;
 }
 
-.h3 {
+.durationNumber {
   font-size: 30px;
-  margin-bottom: 12px;
+  font-weight: bold;
 }
 
-.alth3 {
-  font-size: 30px;
-  margin-bottom: 32px;
-  /* display: flex;
-  justify-content: center; */
-  margin-left: 32px;
-}
-
-.headerSection {
-  background-color: #fff;
-  border-radius: 32px;
-  margin-bottom: 36px;
+.durationLabel {
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .imageContainer {
@@ -34,7 +52,8 @@
   overflow: hidden;
   object-fit: cover;
   position: relative;
-  border-radius: 24px 24px 0px 0px;
+  border-radius: 42px 2px 142px 24px;
+  /* border-radius: 2px 2px 112px 24px; */
 }
 
 .image {
@@ -45,41 +64,62 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
-.headerText {
-  padding: 18px 32px 32px 32px;
-}
-
-.durationLabel {
-  font-size: 20px;
-  font-weight: normal;
-  /* margin-bottom: 48px; */
-}
-
-.duration {
-  font-size: 30px;
-  font-weight: bold;
-}
-
+/* 
+*/
+/* INFORMATION SECTION */
 /* 
 */
 
 .informationSection {
   background-color: #fff;
-  border-radius: 32px;
   margin-bottom: 64px;
-  padding: 32px;
+  padding: 64px 32px 32px 32px;
+  border-radius: 0px 0px 32px 32px;
 }
 
-.informationGrid {
+/* 
+*/
+/* INGREDIENTS */
+/* 
+*/
+
+.ingredientGrid {
   display: grid;
-  grid-template-columns: auto 299px;
+  grid-template-columns: repeat(5, 208px);
+  row-gap: 48px;
+  column-gap: 24px;
+  margin-bottom: 72px;
+  padding-bottom: 72px;
+  border-bottom: 3px solid #f5f5f5;
 }
+
+/* 
+*/
+/* UTENSILS */
+/* 
+*/
 
 .utensilsContainer {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 72px;
+  padding-bottom: 72px;
+  border-bottom: 3px solid #f5f5f5;
 }
 
+/* 
+*/
+/* UTENSILS */
+/* 
+*/
+.nutritionContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+*/
+/* INSTRUCTIONS */
 /* 
 */
 

@@ -1,3 +1,16 @@
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 96px;
+  margin-bottom: 72px;
+}
+
+.subheading {
+  margin-bottom: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
 .container {
   width: 298px;
 }
