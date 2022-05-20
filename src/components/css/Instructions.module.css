@@ -10,13 +10,15 @@
   /* border-radius: 32px; */
   box-shadow: 2px 4px 120px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  height: 552px;
+  height: 558px;
   display: flex;
   flex-direction: column;
 }
 
 .image {
-  width: 384px;
+  width: 362.5px;
+  height: 241.5px;
+
   border-radius: 24px 24px 0px 0px;
   box-shadow: 2px 4px 120px rgba(0, 0, 0, 0.08);
 }

@@ -20,7 +20,7 @@ function FullRecipe() {
   instructions } = {...currentRecipe};
 
   return (
-    <div>
+    <div className={classes.container}>
       {/* HEADER SECTION */}
       <div className={classes.headerSection}>
         <div className={classes.textContainer}>
@@ -71,7 +71,7 @@ function FullRecipe() {
       <div className={classes.instructionsSection}>
         <div className={classes.instructions}></div>
         <h3 className={classes.subheading}>Instructions</h3>
-        <div className={classes.card}>
+        <div className={classes.instructionsGrid}>
           {instructions?.map((step, index) => {
             return (
               <Instructions
