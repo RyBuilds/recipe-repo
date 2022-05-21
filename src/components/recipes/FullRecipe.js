@@ -19,6 +19,8 @@ function FullRecipe() {
   const {id, heading, subheading, duration, image, utensils, ingredients, nutrition, 
   instructions } = {...currentRecipe};
 
+  if (!ingredients || !utensils || !nutrition) return null;
+
   return (
     <div className={classes.container}>
       {/* HEADER SECTION */}

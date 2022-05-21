@@ -1,16 +1,10 @@
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Card from "../ui/Card";
 import classes from "../css/RecipeItem.module.css";
 import { FiClock } from "react-icons/fi";
 
 function RecipeItem(props) {
-  const history = useHistory();
-
-  function viewRecipeHandler() {
-    history.push(`/recipe/${props.slug}`);
-  }
-
   return (
     <li className={classes.item}>
       <Card>
@@ -28,7 +22,9 @@ function RecipeItem(props) {
                 <FiClock /> {props.duration} Minutes
               </span>
               <div className={classes.actions}>
-                <button onClick={viewRecipeHandler}>View Recipe</button>
+                <button>
+                  <Link to={`/recipe/${props.slug}`}>View Recipe</Link>
+                </button>
               </div>
             </div>
           </div>

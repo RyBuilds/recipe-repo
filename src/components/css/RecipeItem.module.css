@@ -40,6 +40,11 @@
   margin-top: auto;
 }
 
+.actions a {
+  text-decoration: none;
+  color: #1d1d1b;
+}
+
 .actions button {
   display: flex;
   font: inherit;

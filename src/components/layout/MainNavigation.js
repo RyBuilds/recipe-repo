@@ -5,7 +5,9 @@ import SearchBar from "../recipes/SearchBar";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Recipe.ly</div>
+      <div className={classes.logo}>
+        <Link to="/">Recipe.ly</Link>
+      </div>
       <nav>
         <ul>
           <li>
