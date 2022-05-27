@@ -17,7 +17,7 @@ function MainNavigation() {
             <Link to="/quick-recipes">Quick Recipes</Link>
           </li>
           <li>
-            <Link to="/new-recipe">Add New Recipe</Link>
+            <Link to="/favourites">Favourites</Link>
           </li>
         </ul>
       </nav>

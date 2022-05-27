@@ -23,7 +23,9 @@ function RecipeItem(props) {
               </span>
               <div className={classes.actions}>
                 <button>
-                  <Link to={`/recipe/${props.slug}`}>View Recipe</Link>
+                  <Link className={classes.button} to={`/recipe/${props.slug}`}>
+                    View Recipe
+                  </Link>
                 </button>
               </div>
             </div>

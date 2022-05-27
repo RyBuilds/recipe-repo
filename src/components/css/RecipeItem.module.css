@@ -48,11 +48,21 @@
 .actions button {
   display: flex;
   font: inherit;
-  cursor: pointer;
-  border: 3px solid #1d1d1b;
-  padding: 8px 16px;
+  border: none;
   border-radius: 10px;
   background-color: #ffffff;
   margin-top: auto;
   top: 0;
+}
+
+.button {
+  padding: 8px 16px;
+  border: 3px solid #1d1d1b;
+  border-radius: 10px;
+}
+
+@media (max-width: 1199px) {
+  .heading {
+    font-size: 26px;
+  }
 }
