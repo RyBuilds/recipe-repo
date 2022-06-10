@@ -36,7 +36,7 @@ body {
   column-gap: 24px;
   row-gap: 48px;
   list-style: none;
-  margin: 64px 32px 128px 32px;
+  margin: 48px 32px 128px 32px;
   padding: 0;
 }
 
@@ -44,10 +44,12 @@ body {
 
 @media (max-width: 1199px) {
   .container {
-    max-width: 100px;
+    max-width: 1000px;
   }
 
   .grid {
-    grid-template-columns: repeat(2, 362px);
+    grid-template-columns: repeat(3, 296px);
+    grid-template-rows: repeat(1, 454px);
+    /* change in card.module and recipeitem.module */
   }
 }

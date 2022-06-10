@@ -61,8 +61,36 @@
   border-radius: 10px;
 }
 
+/* MEDIA QUERIES */
+
 @media (max-width: 1199px) {
+  .item {
+    height: 454px;
+  }
+
+  .image img {
+    width: 296px;
+    height: 197.33px;
+  }
+
+  .content {
+    height: 258px;
+  }
+
   .heading {
     font-size: 26px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .durationAlign {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .actions button {
+    font-size: 16px;
   }
 }
