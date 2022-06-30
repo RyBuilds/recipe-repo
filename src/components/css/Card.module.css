@@ -14,3 +14,15 @@
     height: 454px;
   }
 }
+
+@media (max-width: 999px) {
+  .card {
+    height: 484px;
+  }
+}
+
+@media (max-width: 799px) {
+  .card {
+    height: 454px;
+  }
+}

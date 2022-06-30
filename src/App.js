@@ -1,11 +1,11 @@
 import { Route, Switch } from "react-router-dom";
 
-import Layout from "./components/layout/Layout";
-import AllRecipesPage from "./pages/AllRecipes";
-import FullRecipe from "./components/recipes/FullRecipe";
-import QuickRecipesPage from "./pages/QuickRecipes";
-import NewRecipePage from "./pages/NewRecipe";
 import { RecipesContextProvider } from "./components/data/RecipeContext";
+import Layout from "./components/layout/Layout";
+import AllRecipesPage from "./pages/AllRecipesPage";
+import FullRecipePage from "./pages/FullRecipePage";
+import QuickRecipesPage from "./pages/QuickRecipesPage";
+import FavouritesPage from "./pages/FavouritesPage";
 
 function App() {
   return (
@@ -16,13 +16,13 @@ function App() {
             <AllRecipesPage />
           </Route>
           <Route path="/recipe/:recipeName">
-            <FullRecipe />
+            <FullRecipePage />
           </Route>
           <Route path="/quick-recipes">
             <QuickRecipesPage />
           </Route>
-          <Route path="/new-recipe">
-            <NewRecipePage />
+          <Route path="/favourites">
+            <FavouritesPage />
           </Route>
         </Switch>
       </Layout>

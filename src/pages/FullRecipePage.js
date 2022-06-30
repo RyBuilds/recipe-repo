@@ -1,12 +1,11 @@
-import { useRecipes } from "../data/RecipeContext";
-import Ingredients from "./fullrecipe/Ingredients";
-import Instructions from "./fullrecipe/Instructions";
-import Nutrition from "./fullrecipe/Nutrition";
-import Utensils from "./fullrecipe/Utensils";
+import { useRecipes } from "../components/data/RecipeContext";
+import Ingredients from "../components/recipes/fullrecipe/Ingredients";
+import Instructions from "../components/recipes/fullrecipe/Instructions";
+import Nutrition from "../components/recipes/fullrecipe/Nutrition";
+import Utensils from "../components/recipes/fullrecipe/Utensils";
+import classes from "../components/css/FullRecipePage.module.css";
 
-import classes from "../css/FullRecipe.module.css";
-
-function FullRecipe() {
+function FullRecipePage() {
   const recipes = useRecipes().recipes;
 
   const currentSlug = window.location.href;
@@ -91,4 +90,4 @@ function FullRecipe() {
   );
 }
 
-export default FullRecipe;
+export default FullRecipePage;

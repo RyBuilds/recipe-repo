@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import Card from "../ui/Card";
 import classes from "../css/RecipeItem.module.css";
 import { FiClock } from "react-icons/fi";
+import { FaHeart } from "react-icons/fa";
 
 function RecipeItem(props) {
   return (
     <li className={classes.item}>
       <Card>
+        <div className={classes.favourite}>
+          <FaHeart />
+        </div>
         <div className={classes.image}>
           <img src={props.image} alt={props.heading} />
         </div>

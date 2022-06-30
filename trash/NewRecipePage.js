@@ -1,7 +1,6 @@
 import { useHistory } from "react-router-dom";
-import NewIngredientForm from "../components/recipes/NewIngredientForm";
-
-import NewRecipeForm from "../components/recipes/NewRecipeForm";
+import NewIngredientForm from "./NewIngredientForm";
+import NewRecipeForm from "./NewRecipeForm";
 
 function NewRecipePage() {
   const history = useHistory();

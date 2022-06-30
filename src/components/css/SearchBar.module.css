@@ -5,3 +5,10 @@ input {
   font-size: 16px;
   background-color: #ebebeb;
 }
+
+@media (max-width: 999px) {
+  input {
+    width: 0px;
+    padding: 16px 25.25px;
+  }
+}

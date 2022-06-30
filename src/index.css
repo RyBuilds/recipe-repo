@@ -53,3 +53,26 @@ body {
     /* change in card.module and recipeitem.module */
   }
 }
+
+@media (max-width: 999px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 356px);
+    grid-template-rows: repeat(1, 484px);
+    row-gap: 36px;
+  }
+}
+
+@media (max-width: 799px) {
+  .container {
+    max-width: 680px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 296px);
+    grid-template-rows: repeat(1, 454px);
+  }
+}

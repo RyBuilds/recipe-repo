@@ -21,7 +21,7 @@ function MainNavigation() {
           </li>
         </ul>
       </nav>
-      <SearchBar />
+      {/* <SearchBar /> */}
     </header>
   );
 }

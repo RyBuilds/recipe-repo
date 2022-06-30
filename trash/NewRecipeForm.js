@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import FormCard from "../ui/FormCard";
+import FormCard from "./FormCard";
 import classes from "../css/NewRecipeForm.module.css";
 
 function NewRecipeForm(props) {
