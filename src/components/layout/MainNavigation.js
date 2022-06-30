@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import classes from "../css/MainNavigation.module.css";
-import SearchBar from "../recipes/SearchBar";
 
 function MainNavigation() {
   return (
@@ -21,7 +20,6 @@ function MainNavigation() {
           </li>
         </ul>
       </nav>
-      {/* <SearchBar /> */}
     </header>
   );
 }
